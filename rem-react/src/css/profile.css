@@ -1,0 +1,27 @@
+.profile-container {
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Vertically centers the container */
+  right: 0; /* Aligns the container to the right */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+  width: 80%;
+  min-height: 80vh;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 50px;
+  margin-right: 30px;
+  border-radius: 8px;
+}
+.other-container a {
+  color: black; /* Default color */
+  text-decoration: none; /* Remove underline */
+  display: block;
+}
+
+.other-container a.active {
+  color: red; /* Color when the link is active */
+}
+
+.other-container a:hover {
+  color: blue; /* Optional: Change hover color */
+}

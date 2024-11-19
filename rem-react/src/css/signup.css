@@ -1,0 +1,83 @@
+/* Ensure no global background is applied */
+body {
+  background: none;
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.login-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure it takes full viewport height */
+}
+
+.login-container {
+  max-width: 50%;
+  position: absolute;
+  right: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px 60px;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 0.9rem;
+  width: 30%;
+}
+
+.text-end {
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .background-text {
+    width: 100%;
+    font-size: 0.5rem;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    top: 25%;
+    text-align: center;
+  }
+
+  .login-container {
+    max-width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 65%;
+    transform: translateY(-60%);
+    padding: 20px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,102 @@
+body {
+  background: none; /* Remove any direct background from body */
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.navbar {
+  width: 100%; /* Ensure the navbar spans full width */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Position it at the top */
+  z-index: 1000;
+}
+
+.login-container {
+  max-width: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px 60px;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 0.9rem;
+  width: 30%; /* Optional: You can adjust this based on your needs */
+}
+
+.text-end {
+  margin-right: 15px; /* Keep this for potential use in a .text-end element */
+}
+
+@media (max-width: 768px) {
+  .background-text {
+    width: 100%;
+    font-size: 0.5rem;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    top: 25%;
+    text-align: center;
+  }
+
+  .login-container {
+    max-width: 90%;
+    margin: 0 auto;
+    color: white;
+    top: 65%;
+    transform: translateY(-60%);
+    padding: 20px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1.1rem; /* Scales button font size */
+  }
+}
+.background-image-container {
+  position: fixed; /* Fix the background so it stays in place */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.4) brightness(0.6);
+}
+
+.background-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-image: url("/assets/green_background.jfif"); */
+  background-color: rgba(165, 239, 175, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.4) brightness(0.6);
+}
